@@ -1,5 +1,6 @@
 package com.kennelbound.eyelib.eyetribe
 
+import com.kennelbound.eyelib.AbstractCalibrationManager
 import com.theeyetribe.client.GazeManager
 import com.theeyetribe.client.ICalibrationProcessHandler
 import com.theeyetribe.client.ICalibrationResultListener
@@ -15,7 +16,7 @@ import java.awt.Toolkit
  * Created by samalsto on 2/27/15.
  */
 @Log4j
-class CalibrationManager implements ICalibrationResultListener, ICalibrationProcessHandler, ITrackerStateListener {
+class CalibrationManager extends AbstractCalibrationManager implements ICalibrationResultListener, ICalibrationProcessHandler, ITrackerStateListener {
     private static double TARGET_PADDING = 0.1;
     private static int NUM_MAX_CALIBRATION_ATTEMPTS = 3;
     private static int NUM_MAX_RESAMPLE_POINTS = 3;
